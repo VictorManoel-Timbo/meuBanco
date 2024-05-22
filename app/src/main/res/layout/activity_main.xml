@@ -32,6 +32,7 @@
             android:background="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/header_view" />
 
@@ -45,7 +46,8 @@
             app:layout_constraintEnd_toStartOf="@id/img_olho"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="Logo do genérica do Banco" />
 
         <ImageView
             android:id="@+id/img_olho"
@@ -54,10 +56,25 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="16dp"
             android:src="@drawable/img_olho"
+            app:layout_constraintBottom_toBottomOf="@id/img_logo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toEndOf="@id/img_logo"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="Esconde o valor em conta" />
+
+        <ImageView
+            android:id="@+id/img_extrato"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/arrow_next"
+            app:layout_constraintBottom_toBottomOf="@id/txt_value"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/txt_value"
+            app:layout_constraintTop_toBottomOf="@id/header_view"
+            android:contentDescription="Abre o extrato usuário" />
 
         <TextView
             android:id="@+id/id_name_user"
@@ -82,8 +99,9 @@
             android:text="@string/txt_conta"
             android:textColor="@color/black"
             android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/txt_value"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/header_view" />
+            app:layout_constraintTop_toBottomOf="@id/header_view"/>
 
         <TextView
             android:id="@+id/txt_value"
@@ -94,9 +112,12 @@
             android:fontFamily="@font/candal"
             android:textColor="@color/black"
             android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/id_conta"
+            app:layout_constraintEnd_toStartOf="@id/img_extrato"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toEndOf="@id/id_conta"
-            app:layout_constraintTop_toBottomOf="@id/header_view"
-            />
+            app:layout_constraintTop_toBottomOf="@id/header_view" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
