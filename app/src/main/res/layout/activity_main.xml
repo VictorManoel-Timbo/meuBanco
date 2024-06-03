@@ -42,26 +42,26 @@
             android:layout_height="40dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="20dp"
+            android:contentDescription="Logo do genérica do Banco"
             android:src="@drawable/banco_logo"
             app:layout_constraintEnd_toStartOf="@id/img_olho"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="Logo do genérica do Banco" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/img_olho"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="16dp"
-            android:src="@drawable/img_olho"
+            android:contentDescription="Esconde o valor em conta"
+            android:src="@android:drawable/ic_menu_view"
             app:layout_constraintBottom_toBottomOf="@id/img_logo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toEndOf="@id/img_logo"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="Esconde o valor em conta" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/img_extrato"
@@ -69,12 +69,12 @@
             android:layout_height="20dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            android:contentDescription="Abre o extrato usuário"
             android:src="@drawable/arrow_next"
             app:layout_constraintBottom_toBottomOf="@id/txt_value"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/txt_value"
-            app:layout_constraintTop_toBottomOf="@id/header_view"
-            android:contentDescription="Abre o extrato usuário" />
+            app:layout_constraintTop_toBottomOf="@id/header_view" />
 
         <TextView
             android:id="@+id/id_name_user"
@@ -101,7 +101,7 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@id/txt_value"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/header_view"/>
+            app:layout_constraintTop_toBottomOf="@id/header_view" />
 
         <TextView
             android:id="@+id/txt_value"
@@ -117,6 +117,62 @@
             app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toEndOf="@id/id_conta"
             app:layout_constraintTop_toBottomOf="@id/header_view" />
+
+        <HorizontalScrollView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/id_conta">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/botao_customizado" />
+
+                <Button
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/botao_customizado" />
+
+                <Button
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/botao_customizado"
+                    android:backgroundTint="@color/black"/>
+
+                <Button
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/botao_customizado" />
+
+                <Button
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/botao_customizado" />
+
+                <Button
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/botao_customizado" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
