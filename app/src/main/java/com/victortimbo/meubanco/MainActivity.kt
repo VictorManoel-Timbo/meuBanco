@@ -16,14 +16,14 @@ class MainActivity : AppCompatActivity() {
 
         window.statusBarColor = Color.parseColor("#A4D300")
 
-        var valueTotal = 12.05f
+        val valueTotal = 12.05f
 
-        binding.txtValue.text = "*****"
+        binding.txtValue.text = "*******"
         binding.imgOlho.setOnClickListener {
-            if(binding.txtValue.text == "*****"){
+            if(binding.txtValue.text == "*******"){
                 binding.txtValue.text = "R$ ${"%.2f".format(valueTotal)}"
             }else{
-                binding.txtValue.text = "*****"
+                binding.txtValue.text = "*******"
             }
         }
     }

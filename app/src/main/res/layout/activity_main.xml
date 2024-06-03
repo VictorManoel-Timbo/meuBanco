@@ -51,8 +51,8 @@
 
         <ImageView
             android:id="@+id/img_olho"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="16dp"
             android:contentDescription="Esconde o valor em conta"
@@ -112,6 +112,7 @@
             android:fontFamily="@font/candal"
             android:textColor="@color/black"
             android:textSize="20sp"
+            android:gravity="center"
             app:layout_constraintBottom_toBottomOf="@id/id_conta"
             app:layout_constraintEnd_toStartOf="@id/img_extrato"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
@@ -121,57 +122,85 @@
         <HorizontalScrollView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:fillViewport="true"
             android:layout_marginHorizontal="16dp"
-            android:layout_marginVertical="16dp"
+            android:layout_marginVertical="24dp"
+            android:fillViewport="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/id_conta">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:layout_height="wrap_content">
 
                 <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btn_pix"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@drawable/botao_acesso"
                     android:src="@drawable/img_olho"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/botao_acesso" />
+                    app:layout_constraintEnd_toStartOf="@id/btn_tranferir"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatButton
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btn_tranferir"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/botao_acesso" />
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@drawable/botao_acesso"
+                    android:src="@android:drawable/btn_star"
+                    app:layout_constraintEnd_toStartOf="@id/btn_pagar"
+                    app:layout_constraintStart_toEndOf="@id/btn_pix"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatButton
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btn_pagar"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/botao_acesso" />
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@drawable/botao_acesso"
+                    android:src="@android:drawable/ic_dialog_map"
+                    app:layout_constraintEnd_toStartOf="@id/btn_investir"
+                    app:layout_constraintStart_toEndOf="@id/btn_tranferir"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatButton
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btn_investir"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/botao_acesso" />
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@drawable/botao_acesso"
+                    android:src="@drawable/banco_logo"
+                    app:layout_constraintEnd_toStartOf="@id/btn_depositar"
+                    app:layout_constraintStart_toEndOf="@id/btn_pagar"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatButton
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btn_depositar"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/botao_acesso" />
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@drawable/botao_acesso"
+                    android:src="@android:drawable/stat_notify_chat"
+                    app:layout_constraintEnd_toStartOf="@id/btn_cartoes"
+                    app:layout_constraintStart_toEndOf="@id/btn_investir"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatButton
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btn_cartoes"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/botao_acesso" />
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@drawable/botao_acesso"
+                    android:src="@android:drawable/ic_menu_manage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btn_depositar"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </HorizontalScrollView>
 
