@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         window.statusBarColor = Color.parseColor("#A4D300")
 
-        val valueTotal = 12.05f
+        val valueTotal = 00.00f
 
         binding.txtValue.text = "*******"
         binding.imgOlho.setOnClickListener {
