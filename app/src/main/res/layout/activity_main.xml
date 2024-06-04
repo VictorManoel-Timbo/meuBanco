@@ -29,7 +29,7 @@
             android:id="@+id/body_view"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:background="@color/white"
+            android:background="#E6E6E6"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -38,11 +38,10 @@
 
         <ImageView
             android:id="@+id/img_logo"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="20dp"
-            android:contentDescription="Logo do genérica do Banco"
             android:src="@drawable/banco_logo"
             app:layout_constraintEnd_toStartOf="@id/img_olho"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
@@ -51,11 +50,10 @@
 
         <ImageView
             android:id="@+id/img_olho"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="16dp"
-            android:contentDescription="Esconde o valor em conta"
             android:src="@android:drawable/ic_menu_view"
             app:layout_constraintBottom_toBottomOf="@id/img_logo"
             app:layout_constraintEnd_toEndOf="parent"
@@ -67,9 +65,8 @@
             android:id="@+id/img_extrato"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
-            android:contentDescription="Abre o extrato usuário"
             android:src="@drawable/arrow_next"
             app:layout_constraintBottom_toBottomOf="@id/txt_value"
             app:layout_constraintEnd_toEndOf="parent"
@@ -94,7 +91,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="32dp"
             android:fontFamily="@font/candal"
             android:text="@string/txt_conta"
             android:textColor="@color/black"
@@ -108,11 +105,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="32dp"
             android:fontFamily="@font/candal"
+            android:gravity="center"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:gravity="center"
             app:layout_constraintBottom_toBottomOf="@id/id_conta"
             app:layout_constraintEnd_toStartOf="@id/img_extrato"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
@@ -123,7 +120,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
-            android:layout_marginVertical="24dp"
+            android:layout_marginVertical="32dp"
             android:fillViewport="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -131,7 +128,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp">
 
                 <androidx.appcompat.widget.AppCompatImageButton
                     android:id="@+id/btn_pix"
@@ -139,11 +137,25 @@
                     android:layout_height="64dp"
                     android:layout_marginHorizontal="8dp"
                     android:background="@drawable/botao_acesso"
-                    android:src="@drawable/img_olho"
+                    android:src="@drawable/pix_icon"
+                    app:layout_constraintBottom_toTopOf="@id/txt_pix"
                     app:layout_constraintEnd_toStartOf="@id/btn_tranferir"
-                    app:layout_constraintHorizontal_chainStyle="spread"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_pix"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:gravity="center"
+                    android:text="@string/txtPix"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/txt_transferir"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_pix" />
 
                 <androidx.appcompat.widget.AppCompatImageButton
                     android:id="@+id/btn_tranferir"
@@ -152,9 +164,24 @@
                     android:layout_marginHorizontal="8dp"
                     android:background="@drawable/botao_acesso"
                     android:src="@android:drawable/btn_star"
+                    app:layout_constraintBottom_toTopOf="@id/txt_transferir"
                     app:layout_constraintEnd_toStartOf="@id/btn_pagar"
                     app:layout_constraintStart_toEndOf="@id/btn_pix"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_transferir"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:gravity="center"
+                    android:text="@string/txtTransferir"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/txt_pagar"
+                    app:layout_constraintStart_toEndOf="@id/txt_pix"
+                    app:layout_constraintTop_toBottomOf="@id/btn_tranferir" />
 
                 <androidx.appcompat.widget.AppCompatImageButton
                     android:id="@+id/btn_pagar"
@@ -163,9 +190,24 @@
                     android:layout_marginHorizontal="8dp"
                     android:background="@drawable/botao_acesso"
                     android:src="@android:drawable/ic_dialog_map"
+                    app:layout_constraintBottom_toTopOf="@id/txt_pagar"
                     app:layout_constraintEnd_toStartOf="@id/btn_investir"
                     app:layout_constraintStart_toEndOf="@id/btn_tranferir"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_pagar"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:gravity="center"
+                    android:text="@string/txtPagar"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/txt_investir"
+                    app:layout_constraintStart_toEndOf="@id/txt_transferir"
+                    app:layout_constraintTop_toBottomOf="@id/btn_pagar" />
 
                 <androidx.appcompat.widget.AppCompatImageButton
                     android:id="@+id/btn_investir"
@@ -174,9 +216,24 @@
                     android:layout_marginHorizontal="8dp"
                     android:background="@drawable/botao_acesso"
                     android:src="@drawable/banco_logo"
+                    app:layout_constraintBottom_toTopOf="@id/txt_investir"
                     app:layout_constraintEnd_toStartOf="@id/btn_depositar"
                     app:layout_constraintStart_toEndOf="@id/btn_pagar"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_investir"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:gravity="center"
+                    android:text="@string/txtInvestir"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/txt_depositar"
+                    app:layout_constraintStart_toEndOf="@id/txt_pagar"
+                    app:layout_constraintTop_toBottomOf="@id/btn_investir" />
 
                 <androidx.appcompat.widget.AppCompatImageButton
                     android:id="@+id/btn_depositar"
@@ -185,9 +242,24 @@
                     android:layout_marginHorizontal="8dp"
                     android:background="@drawable/botao_acesso"
                     android:src="@android:drawable/stat_notify_chat"
+                    app:layout_constraintBottom_toTopOf="@id/txt_depositar"
                     app:layout_constraintEnd_toStartOf="@id/btn_cartoes"
                     app:layout_constraintStart_toEndOf="@id/btn_investir"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_depositar"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:gravity="center"
+                    android:text="@string/txtDepositar"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/txt_cartoes"
+                    app:layout_constraintStart_toEndOf="@id/txt_investir"
+                    app:layout_constraintTop_toBottomOf="@id/btn_depositar" />
 
                 <androidx.appcompat.widget.AppCompatImageButton
                     android:id="@+id/btn_cartoes"
@@ -199,6 +271,20 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/btn_depositar"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_cartoes"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:gravity="center"
+                    android:text="@string/txtCartoes"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/txt_depositar"
+                    app:layout_constraintTop_toBottomOf="@id/btn_cartoes" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

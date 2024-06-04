@@ -2,4 +2,10 @@
     <string name="app_name">meuBanco</string>
     <string name="txt_name_user">Olá, Usuário</string>
     <string name="txt_conta">Conta</string>
+    <string name="txtPix">pix</string>
+    <string name="txtTransferir">transferir</string>
+    <string name="txtPagar">pagar</string>
+    <string name="txtInvestir">investir</string>
+    <string name="txtDepositar">depositar</string>
+    <string name="txtCartoes">cartões</string>
 </resources>
