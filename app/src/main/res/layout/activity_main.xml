@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="none"
     android:fillViewport="true"
     tools:context=".MainActivity">
 
@@ -43,11 +44,11 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="20dp"
             android:src="@drawable/menu_icon"
+            app:layout_constraintBottom_toTopOf="@id/id_name_user"
             app:layout_constraintEnd_toStartOf="@id/img_olho"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/id_name_user"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/img_olho"
@@ -64,8 +65,8 @@
 
         <ImageView
             android:id="@+id/img_extrato"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
             android:src="@drawable/arrow_next"
@@ -85,9 +86,9 @@
             android:text="@string/txt_name_user"
             android:textColor="@color/black"
             android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/body_view"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/img_logo"
-            app:layout_constraintBottom_toTopOf="@id/body_view"/>
+            app:layout_constraintTop_toBottomOf="@id/img_logo" />
 
         <TextView
             android:id="@+id/id_conta"
@@ -127,10 +128,10 @@
             android:layout_marginTop="32dp"
             android:fillViewport="true"
             android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@id/seguros"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/id_conta"
-            app:layout_constraintBottom_toTopOf="@id/seguros">
+            app:layout_constraintTop_toBottomOf="@id/id_conta">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
@@ -299,28 +300,41 @@
             android:id="@+id/seguros"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="32dp"
-            android:backgroundTint="@color/lightGray"
-            android:text="Seguros"
-            app:layout_constraintTop_toBottomOf="@id/horizontalMenu"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="64dp"
+            android:background="@drawable/botao_maior_acesso"
+            android:text="Seguro"
+            android:textAlignment="textStart"
+            android:textStyle="italic"
+            android:drawableEnd="@drawable/arrow_next"
             app:layout_constraintEnd_toStartOf="@id/emprestimo"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            />
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontalMenu"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/emprestimo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="32dp"
-            android:backgroundTint="@color/lightGray"
-            android:text="Emprestimo"
-            app:layout_constraintTop_toBottomOf="@id/horizontalMenu"
+            android:background="@drawable/botao_maior_acesso"
+            android:text="Empréstimo"
+            android:textStyle="bold|italic"
+            android:textAlignment="textStart"
+            android:drawableEnd="@drawable/arrow_next"
+            android:textCursorDrawable="@drawable/pix_icon"
+            app:layout_constraintTop_toTopOf="@id/seguros"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/seguros"
-            />
+            app:layout_constraintTop_toBottomOf="@id/horizontalMenu" />
+
+        <View
+            android:id="@+id/view_line_catoes"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="32dp"
+            android:background="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/seguros"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
