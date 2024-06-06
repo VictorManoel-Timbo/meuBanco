@@ -8,4 +8,12 @@
     <string name="txtInvestir">investir</string>
     <string name="txtDepositar">depositar</string>
     <string name="txtCartoes">cartões</string>
+    <string name="txt_description_cartaoCredito">Solicite seu cartão de crédito hoje e controle sua vida financeira.</string>
+    <string name="txt_title_cartaoCredito">Cartão de crédito</string>
+    <string name="txt_btn_emprestimo">Empréstimo</string>
+    <string name="txt_btn_seguro">Seguro</string>
+    <string name="txt_btn_cartaoCredito">Solicitar cartão</string>
+    <string name="txt_description_separarSaldo">Valor de saldo separado.</string>
+    <string name="txt_btn_separarSaldo">Separar saldo</string>
+    <string name="txt_title_separarSaldo">Saldo separado</string>
 </resources>
