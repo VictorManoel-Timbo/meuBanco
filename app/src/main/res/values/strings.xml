@@ -16,4 +16,7 @@
     <string name="txt_description_separarSaldo">Valor de saldo separado.</string>
     <string name="txt_btn_separarSaldo">Separar saldo</string>
     <string name="txt_title_separarSaldo">Saldo separado</string>
+    <string name="txt_value_separarSaldo">R$ 0,00</string>
+    <string name="Description_app">Esse aplicativo é somente uma simulação de um app de Banco Digital inspirado no design do Nubank, podendo acessar algumas abas, porém sem funcionalidade real.</string>
+    <string name="txt_cashback">Cashback\nR$ 0,00</string>
 </resources>

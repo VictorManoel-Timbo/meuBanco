@@ -16,14 +16,18 @@ class MainActivity : AppCompatActivity() {
 
         window.statusBarColor = Color.parseColor("#A4D300")
 
-        val valueTotal = 00.00f
+        val valueSaldo = 00.00f
+        val valueSaldoSeparado = 12.75f
 
         binding.txtValue.text = "*******"
+        binding.valueSepararSaldo.text = "*******"
         binding.imgOlho.setOnClickListener {
-            if(binding.txtValue.text == "*******"){
-                binding.txtValue.text = "R$ ${"%.2f".format(valueTotal)}"
+            if(binding.txtValue.text == "*******" && binding.valueSepararSaldo.text == "*******"){
+                binding.txtValue.text = "R$ ${"%.2f".format(valueSaldo)}"
+                binding.valueSepararSaldo.text = "R$ ${"%.2f".format(valueSaldoSeparado)}"
             }else{
                 binding.txtValue.text = "*******"
+                binding.valueSepararSaldo.text = "*******"
             }
         }
     }
